@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Lift Off Part 2.unity
+    guid: 706235415acc446a890804c088a598d4
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: a843aee84bbce4f93ab0efd0eff1e92c
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: d2eddbdf73ecd472d8f6cf08d005b9d2
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScreen.unity
+    guid: ea6232743c54043f59676f4e0fbaf5d9
+  - enabled: 1
+    path: Assets/Scenes/LiftOffTesting.unity
+    guid: 5dfb65ace2cf74ba995e135fe8c04d6e
