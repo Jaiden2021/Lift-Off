@@ -5,6 +5,8 @@ using UnityEngine;
 public class MeteorSpawner : MonoBehaviour {
 
 	public GameObject MeteorPrefab;
+	public float difficulty = 1.0f;
+	int numMeteors = 0;
 
 	public float minDelay;
 	public float maxDelay;
@@ -27,13 +29,19 @@ public class MeteorSpawner : MonoBehaviour {
 			lastSpawnTime = Time.time;
 			spawnDelay = Random.Range(minDelay, maxDelay);
 
+			if (numMeteors%10 == 0) {
+				difficulty += .1f;
+			}
 
 		}
 	}
 
 	void SpawnMeteor () {
 		Vector2 spawnPosition = new Vector2(Random.Range(-2.9f, 3.5f), 10);
-		Instantiate(MeteorPrefab, spawnPosition, Quaternion.identity);
+		GameObject Meteor = Instantiate(MeteorPrefab, spawnPosition, Quaternion.identity) as GameObject;
+		Meteor.GetComponent<Rigidbody2D> ().gravityScale = difficulty;
+		numMeteors++;
 	}
+
 
 }

@@ -38,7 +38,10 @@ public class PlayerControl : MonoBehaviour {
 
 		if (Input.GetKey(leftKey)) {
 			moveDirection += Vector2.left;
-		}
+		} 
+		/*float x = Input.GetAxis ("Horizontal");
+		moveDirection += new Vector2 (x, 0);*/
+
 
 		if(timerText != null){
 			timerText.text = Mathf.Floor(timer * 100f).ToString ();
