@@ -48,7 +48,7 @@ public class PlayerMechanics : MonoBehaviour {
 			timerText.text = Mathf.Floor(timer).ToString ();
 			Score.gameScore = (int)Mathf.Floor (timer);
 		}
-		Debug.Log (timer);
+		//Debug.Log (timer);
 	}
 
 	void FixedUpdate () {

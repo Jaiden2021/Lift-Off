@@ -587,7 +587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 336, y: 34}
+  m_AnchoredPosition: {x: 265.55634, y: 30.563751}
   m_SizeDelta: {x: 416, y: 78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577801105
@@ -877,8 +877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.479542, y: 16.464996}
-  m_SizeDelta: {x: 324.4, y: 113.07}
+  m_AnchoredPosition: {x: 27.238129, y: 13.028748}
+  m_SizeDelta: {x: 504.8, y: 113.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171545979
 MonoBehaviour:
@@ -912,7 +912,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Your Score:'
+  m_Text: 'Your Score:    sec'
 --- !u!222 &1171545980
 CanvasRenderer:
   m_ObjectHideFlags: 0
