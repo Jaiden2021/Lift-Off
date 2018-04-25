@@ -6,9 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerMechanics : MonoBehaviour {
 
+	//public gameobject ...
 	public float timer = 0;
 	public AudioSource ExplosionCollision;
 
+	public bool HasShaken = false;
+
+	public bool Gameover = false;
 
 	public Text timerText;
 
@@ -49,6 +53,13 @@ public class PlayerMechanics : MonoBehaviour {
 			Score.gameScore = (int)Mathf.Floor (timer);
 		}
 		//Debug.Log (timer);
+		if (Gameover) {
+		if (HasShaken) {
+			Debug.Log ("!");
+			SceneManager.LoadScene ("EndScreen", LoadSceneMode.Single);
+			ExplosionCollision.Play ();
+		}
+		}
 	}
 
 	void FixedUpdate () {
@@ -59,10 +70,16 @@ public class PlayerMechanics : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){                       //Setting up if statement for when balloon collides with enemy
 
 		if (other.gameObject.tag == "Enemy") {
+			
+			ScreenShake CamShake = GameObject.Find ("Main Camera").GetComponent<ScreenShake> ();
+			CamShake.MinorShake (.37f);
+			//GameObject. = Instantiate gameobject Vector
 
-			Debug.Log ("!");
-			SceneManager.LoadScene ("EndScreen", LoadSceneMode.Single);
-			ExplosionCollision.Play ();
+			//Destroy gameobject
+			Gameover = true;
+
+		
+
 		}
 	}
 }
